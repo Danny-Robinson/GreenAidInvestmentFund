@@ -17,19 +17,6 @@ interface BodyProps {
 }
 
 const Body = ({ Component, pageProps, initialized }: BodyProps) => {
-	// const [search, setSearch] = useState('');
-	// const width = useWidth();
-	// const prevWidth = usePrevious(width);
-
-	// useEffect(() => {
-	// 	if (
-	// 		(prevWidth === 'sm' && width === 'md') ||
-	// 		(prevWidth === 'md' && width === 'sm')
-	// 	) {
-	// 		setSearch('');
-	// 	}
-	// }, [width, prevWidth]);
-
 	return (
 		<>
 			<header>
