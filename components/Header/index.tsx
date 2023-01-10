@@ -33,15 +33,17 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 	}, []);
 
 	const isAtTop = scrollY === 0;
+	const isLightMode = isHome && isAtTop;
+
 	const Logo = (
 		<Box display="flex" alignItems="center">
-			<LogoSymbol variant={isAtTop ? 'light' : 'dark'} mr={2} />
-			<LogoTxt variant={isAtTop ? 'light' : 'dark'} />
+			<LogoSymbol variant={isLightMode ? 'light' : 'dark'} mr={2} />
+			<LogoTxt variant={isLightMode ? 'light' : 'dark'} />
 		</Box>
 	);
 
 	const linkProps: LinkProps['linkProps'] = {
-		color: isAtTop ? colors.White : colors.Green1,
+		color: isLightMode ? colors.White : colors.Green1,
 		underline: 'never'
 	};
 
