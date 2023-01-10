@@ -26,9 +26,6 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 				<Image
 					src="/img/splash.png"
 					alt="splash-image"
-					sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
 					fill
 					{...(isXs && { objectFit: 'cover' })}
 				/>

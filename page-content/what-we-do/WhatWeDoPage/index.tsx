@@ -1,20 +1,13 @@
-import { Container } from '@mui/material';
-import { Box } from '@mui/system';
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
-import { Button } from '../../../components/Button';
-import { LogoSymbol } from '../../../components/Icons/LogoSymbol';
-import { LogoTxt } from '../../../components/Icons/LogoTxt';
-import { Txt } from '../../../components/Txt';
 import {
 	GENERIC_DESCRIPTION,
 	GENERIC_IMAGE,
 	GENERIC_TITLE,
 	Routes
 } from '../../../constants';
-import { colors, txtProps } from '../../../constants/styleguide';
 import { PageMeta } from '../../../types/next';
 import { getPageMeta } from '../../../utils/getPageMeta';
+import { Approach } from './Approach';
 import { HeroBanner } from './HeroBanner';
 import { WhatWeDo } from './WhatWeDo';
 
@@ -42,6 +35,7 @@ export const WhatWeDoPage = () => {
 		<>
 			<HeroBanner />
 			<WhatWeDo />
+			<Approach />
 		</>
 	);
 };
