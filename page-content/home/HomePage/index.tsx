@@ -1,6 +1,4 @@
-import { Container } from '@mui/material';
 import { GetStaticProps } from 'next';
-import Link from 'next/link';
 import {
 	GENERIC_DESCRIPTION,
 	GENERIC_IMAGE,
