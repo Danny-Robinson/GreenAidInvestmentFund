@@ -13,7 +13,7 @@ export const LogoSymbol = ({ variant, ...restProps }: LogoSymbolProps) => {
 			case 'light':
 				return colors.White;
 			case 'green':
-				return colors.Green3;
+				return colors.Green2;
 		}
 	})();
 
@@ -28,7 +28,7 @@ export const LogoSymbol = ({ variant, ...restProps }: LogoSymbolProps) => {
 			>
 				<path
 					d="M12.2812 10.453C15.0759 10.453 17.3414 8.16988 17.3414 5.35356C17.3414 2.53723 15.0759 0.25415 12.2812 0.25415C9.48649 0.25415 7.22095 2.53723 7.22095 5.35356C7.22095 8.16988 9.48649 10.453 12.2812 10.453Z"
-					fill="#C9E873"
+					fill={variant === 'green' ? colors.Green2 : colors.Green3}
 				/>
 				<path
 					d="M16.1333 12.7755C14.4349 14.2693 13.4614 16.4327 13.4614 18.7037V27.7459H14.4558C14.4558 26.3927 15.0367 25.1049 16.0473 24.2129L21.8905 19.069C23.5889 17.5752 24.5623 15.4118 24.5623 13.1408V5.35352L16.1309 12.7755H16.1333Z"

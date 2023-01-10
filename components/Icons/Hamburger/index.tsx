@@ -1,9 +1,11 @@
 import { Box, BoxProps } from '@mui/material';
 import { colors } from '../../../constants/styleguide';
 
-export interface HamburgerProps extends BoxProps {}
+export interface HamburgerProps extends BoxProps {
+	variant: 'dark' | 'light';
+}
 
-export const Hamburger = ({ ...restProps }: HamburgerProps) => {
+export const Hamburger = ({ variant, ...restProps }: HamburgerProps) => {
 	return (
 		<Box {...restProps}>
 			<svg
@@ -15,19 +17,19 @@ export const Hamburger = ({ ...restProps }: HamburgerProps) => {
 			>
 				<path
 					d="M2 1.90842H26"
-					stroke={colors.Green1}
+					stroke={variant === 'dark' ? colors.Green1 : colors.White}
 					stroke-width="3"
 					stroke-linecap="round"
 				/>
 				<path
 					d="M2 13.9084H26"
-					stroke={colors.Green1}
+					stroke={variant === 'dark' ? colors.Green1 : colors.White}
 					stroke-width="3"
 					stroke-linecap="round"
 				/>
 				<path
 					d="M2 25.9084H26"
-					stroke={colors.Green1}
+					stroke={variant === 'dark' ? colors.Green1 : colors.White}
 					stroke-width="3"
 					stroke-linecap="round"
 				/>

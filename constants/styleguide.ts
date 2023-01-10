@@ -78,3 +78,20 @@ export const txtProps = {
 		fontWeight: 450
 	}
 };
+
+export const zIndex = {
+	One: 1,
+	Two: 2,
+	Three: 3,
+	AlwaysTop: 9999
+};
+
+export const breakpoints = {
+	values: {
+		xs: 0,
+		sm: 730,
+		md: 1090,
+		lg: 1280,
+		xl: 1920
+	}
+};

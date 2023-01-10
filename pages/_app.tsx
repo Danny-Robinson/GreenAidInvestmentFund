@@ -5,6 +5,8 @@ import { AppProps as NextAppProps } from 'next/app';
 import { HeaderTags } from '../components/HeaderTags';
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
+import { Footer } from '../components/Footer';
+import './index.css';
 
 interface AppProps extends NextAppProps {
 	Component: any;
@@ -56,6 +58,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
 				Component={Component}
 				initialized={initialized}
 			/>
+			<footer>
+				<Footer />
+			</footer>
 		</>
 	);
 }

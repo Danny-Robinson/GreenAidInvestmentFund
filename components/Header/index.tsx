@@ -1,7 +1,7 @@
 import { Box, BoxProps, styled } from '@mui/material';
 import { Container } from '@mui/system';
 import { Routes } from '../../constants';
-import { colors, txtProps } from '../../constants/styleguide';
+import { colors, txtProps, zIndex } from '../../constants/styleguide';
 import { useMobile } from '../../utils/useMobile';
 import { Link, LinkProps } from '../Link';
 import { LogoSymbol } from '../Icons/LogoSymbol';
@@ -12,14 +12,6 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
 export interface HeaderProps extends BoxProps {}
-
-const StyledLink = styled(Link)`
-	text-decoration: none;
-
-	&:hover {
-		text-decoration: underline;
-	}
-`;
 
 export const Header = ({ ...restProps }: HeaderProps) => {
 	const isXs = useMobile('xs');
@@ -60,6 +52,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 			top={0}
 			{...(!isAtTop && { bgcolor: colors.White })}
 			py={1}
+			zIndex={zIndex.AlwaysTop}
 			{...restProps}
 		>
 			<Container>
@@ -68,11 +61,11 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 
 					<Box display="flex" alignItems="center">
 						{isXs ? (
-							<Hamburger height="20px" />
+							<Hamburger variant={isAtTop ? 'light' : 'dark'} />
 						) : (
 							<>
 								<Box
-									component={StyledLink}
+									component={Link}
 									href={Routes.WhatWeDo}
 									linkProps={linkProps}
 									mx={2}
@@ -82,7 +75,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 									</Txt>
 								</Box>
 								<Box
-									component={StyledLink}
+									component={Link}
 									href={Routes.AboutUs}
 									linkProps={linkProps}
 									mx={2}
@@ -90,7 +83,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 									<Txt {...txtProps.headline2}>About Us</Txt>
 								</Box>
 								<Box
-									component={StyledLink}
+									component={Link}
 									href={Routes.ContactUs}
 									linkProps={linkProps}
 									mx={2}

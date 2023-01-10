@@ -32,7 +32,7 @@ export const MaterialLink = styled(MuiLink as FC<MaterialLinkProps>, {
     `}
 `;
 
-export const Link = ({
+export const PrestyledLink = ({
 	linkProps,
 	children,
 	external,
@@ -59,3 +59,11 @@ export const Link = ({
 		</NextLink>
 	);
 };
+
+export const Link = styled(PrestyledLink)`
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: underline !important;
+	}
+`;

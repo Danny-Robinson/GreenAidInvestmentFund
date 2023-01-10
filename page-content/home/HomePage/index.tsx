@@ -9,6 +9,9 @@ import {
 } from '../../../constants';
 import { PageMeta } from '../../../types/next';
 import { getPageMeta } from '../../../utils/getPageMeta';
+import { Commitments } from './Commitments';
+import { HeroBanner } from './HeroBanner';
+import { WhatIsGreenAid } from './WhatIsGreenAid';
 
 export const getStaticProps: GetStaticProps<{
 	meta: PageMeta;
@@ -31,9 +34,10 @@ export const getStaticProps: GetStaticProps<{
 
 export const HomePage = () => {
 	return (
-		<Container>
-			<div>HomePage here</div>
-			<Link href="/test">some other page here</Link>
-		</Container>
+		<>
+			<HeroBanner />
+			<WhatIsGreenAid />
+			<Commitments />
+		</>
 	);
 };
