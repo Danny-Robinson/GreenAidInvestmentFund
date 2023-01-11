@@ -20,7 +20,7 @@ export const StyledTxt = styled(Txt)`
 export const Footer = ({ ...restProps }: FooterProps) => {
 	const isXs = useMobile('xs');
 	const Logo = (
-		<Box display="flex" flexDirection="column" alignItems="center" mb={4}>
+		<Box display="flex" flexDirection="column" alignItems="center" mb={8}>
 			<LogoSymbol variant="dark" mb={1} />
 			<LogoTxt variant="light" />
 		</Box>
@@ -116,8 +116,8 @@ export const Footer = ({ ...restProps }: FooterProps) => {
 		<Box
 			bgcolor={colors.Black}
 			width="100%"
-			pt={4}
-			pb={2}
+			pt={9}
+			pb={3}
 			zIndex={zIndex.AlwaysTop}
 			{...restProps}
 		>
@@ -126,7 +126,7 @@ export const Footer = ({ ...restProps }: FooterProps) => {
 					display="flex"
 					flexDirection="column"
 					alignItems={isXs ? 'center' : 'flex-start'}
-					mb={8}
+					mb={16}
 				>
 					{Logo}
 					{Links}

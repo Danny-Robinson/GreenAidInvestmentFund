@@ -10,6 +10,8 @@ const StyledButton = styled(MuiButton)`
 	color: ${colors.White};
 	background-color: ${colors.Green2};
 	text-transform: none;
+	padding-right: 24px;
+	padding-left: 24px;
 
 	&:hover {
 		background-color: ${colors.Green3};

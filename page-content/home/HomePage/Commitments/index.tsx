@@ -10,9 +10,9 @@ export interface CommitmentsProps extends BoxProps {}
 const COPY = [
 	'Reducing barriers to entry for investors seeking exposure to the voluntary carbon market (VCM)',
 	'Committed to the integrity based scalability of the VCM by ensuring delivery of the highest quality credits',
-	'Distributing a predetermined supply of carbon credits through naturebased projects',
-	'Proven track record in the U.K',
-	'Committed to positively impacting local communities & wildlife conservation efforts'
+	'Distributing a predetermined supply of carbon credits through nature and technology based projects',
+	'Committed to positively impacting local communities & wildlife conservation efforts',
+	'Proven track record in the U.K'
 ];
 
 const Commitment = ({ text }: { text: string }) => {
@@ -35,7 +35,7 @@ const Commitment = ({ text }: { text: string }) => {
 
 export const Commitments = ({ ...restProps }: CommitmentsProps) => {
 	return (
-		<Box pt={8} pb={10} {...restProps}>
+		<Box py={15} {...restProps}>
 			<Container>
 				<Grid container spacing={4}>
 					{COPY.map((text) => {

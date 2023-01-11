@@ -14,14 +14,14 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
 					display="flex"
 					flexDirection="column"
 					alignItems="center"
-					py={12}
+					py={{ xs: 25, sm: 15 }}
 				>
 					<Txt {...txtProps.title} mb={6} color={colors.Green1}>
 						What is Green Aid
 					</Txt>
 					<Txt
 						{...txtProps.body1}
-						mb={4}
+						mb={{ xs: 6, sm: 4 }}
 						maxWidth={620}
 						textAlign="center"
 						color={colors.Green1}

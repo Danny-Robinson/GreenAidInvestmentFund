@@ -129,7 +129,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 				position="fixed"
 				top={0}
 				{...(!isAtTop && { bgcolor: colors.White })}
-				py={1}
+				py={2}
 				zIndex={zIndex.AlwaysTop}
 				{...restProps}
 			>
