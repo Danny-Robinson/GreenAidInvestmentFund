@@ -31,30 +31,25 @@ const COPY = [
 ];
 
 export const Approach = ({ ...restProps }: ApproachProps) => {
-	const isSm = useMobile('sm');
+	const isMd = useMobile('md');
 
 	return (
-		<Box bgcolor={colors.White} py={10} {...restProps}>
+		<Box bgcolor={colors.White} py={15} {...restProps}>
 			<Container>
-				<Box
-					bgcolor={colors.Green3}
-					boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
-					width="100%"
-					borderRadius="20px"
-				>
+				<Box bgcolor={colors.Green3} width="100%" borderRadius="20px">
 					<Grid container>
-						<Grid item xs={12} sm={6} order={{ xs: 2, sm: 1 }}>
+						<Grid item sm={12} md={6} order={{ sm: 2, md: 1 }}>
 							<Box
 								display="flex"
 								flexDirection="column"
 								alignItems="center"
 								py={10}
 							>
-								<Box px={5}>
+								<Box px={12}>
 									<Txt
 										{...txtProps.title}
 										color={colors.Green1}
-										mb={4}
+										mb={6}
 									>
 										The Green Aid Approach
 									</Txt>
@@ -62,7 +57,7 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
 									{COPY.map((text, index) => (
 										<Bullet
 											{...(index < COPY.length && {
-												mb: 2
+												mb: 3
 											})}
 											text={text}
 										/>
@@ -70,22 +65,22 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
 								</Box>
 							</Box>
 						</Grid>
-						<Grid item xs={12} sm={6} order={{ xs: 1, sm: 2 }}>
+						<Grid item sm={12} md={6} order={{ sm: 1, md: 2 }}>
 							<Box
 								width="100%"
-								height={{ xs: '400px', sm: '100%' }}
+								height={{ sm: '400px', md: '100%' }}
 								position="relative"
 								borderRadius={{
-									xs: '20px 20px 0px 0px',
-									sm: '0px 20px 20px 0px'
+									sm: '20px 20px 0px 0px',
+									md: '0px 20px 20px 0px'
 								}}
 								overflow="hidden"
 							>
 								<Image
-									src="/img/cottage.png"
-									alt="splash-image"
+									src="/img/valley.webp"
+									alt="valley-image"
 									fill
-									{...(isSm && { objectFit: 'cover' })}
+									{...(isMd && { objectFit: 'cover' })}
 								/>
 							</Box>
 						</Grid>
