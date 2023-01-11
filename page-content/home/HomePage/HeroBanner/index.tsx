@@ -24,7 +24,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 		<Box {...restProps}>
 			<Box width="100%" height={imageHeight} position="relative">
 				<Image
-					src="/img/splash.png"
+					src="/img/splash.webp"
 					alt="splash-image"
 					fill
 					{...(isXs && { objectFit: 'cover' })}
