@@ -2,6 +2,8 @@ import { Container } from '@mui/material';
 import Image from 'next/image';
 import { Box, BoxProps } from '../../../../components/Box';
 import { Txt } from '../../../../components/Txt';
+import { WorkflowDesktop } from '../../../../components/Workflow/Desktop';
+import { WorkflowMobile } from '../../../../components/Workflow/Mobile';
 import {
 	breakpoints,
 	colors,
@@ -12,38 +14,38 @@ import { useMobile } from '../../../../utils/useMobile';
 export interface WhatWeDoProps extends BoxProps {}
 
 export const WhatWeDo = ({ ...restProps }: WhatWeDoProps) => {
-	const isXs = useMobile('xs');
+	const isSm = useMobile('sm');
 
 	return (
-		<Box bgcolor={colors.Green1} pt={10} {...restProps}>
+		<Box
+			bgcolor={colors.Green1}
+			pt={10}
+			pb={20}
+			// height={{ xs: '2200px', md: '1800px' }}
+			{...restProps}
+		>
 			<Container>
-				<Box display="flex" flexDirection="column" alignItems="center">
-					<Txt {...txtProps.title} color={colors.White}>
+				<Box display="flex" flexDirection="column">
+					<Txt
+						{...txtProps.title}
+						color={colors.White}
+						mb={10}
+						textAlign="center"
+					>
 						What we do
 					</Txt>
 					<Box
-						width={{
-							xs: '80vw',
-							sm: '60vw',
-							md: 'calc(35vw + 100px)'
-						}}
-						height={{
-							xs: '200vh',
-							sm: '80vw',
-							md: 'calc(35vw + 100px)'
-						}}
-						position="relative"
-						my={8}
+						pt={4}
+						display="flex"
+						justifyContent="center"
+						height="100%"
+						width="100%"
 					>
-						<Image
-							src={
-								isXs
-									? '/img/workflow-mobile.png'
-									: '/img/workflow-desktop.png'
-							}
-							alt="workflow"
-							fill
-						/>
+						{isSm ? (
+							<WorkflowMobile />
+						) : (
+							<WorkflowDesktop width="100%" />
+						)}
 					</Box>
 				</Box>
 			</Container>
