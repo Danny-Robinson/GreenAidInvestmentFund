@@ -34,9 +34,9 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
 	const isMd = useMobile('md');
 
 	return (
-		<Box bgcolor={colors.White} py={15} {...restProps}>
+		<Box bgcolor={colors.White} py={8} {...restProps}>
 			<Container>
-				<Box bgcolor={colors.Green3} width="100%" borderRadius="20px">
+				<Box bgcolor={colors.Green3} width="100%" borderRadius="48px">
 					<Grid container>
 						<Grid item sm={12} md={6} order={{ sm: 2, md: 1 }}>
 							<Box
@@ -71,8 +71,8 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
 								height={{ sm: '400px', md: '100%' }}
 								position="relative"
 								borderRadius={{
-									sm: '20px 20px 0px 0px',
-									md: '0px 20px 20px 0px'
+									sm: '48px 48px 0px 0px',
+									md: '0px 48px 48px 0px'
 								}}
 								overflow="hidden"
 							>
