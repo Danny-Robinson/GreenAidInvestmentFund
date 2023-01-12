@@ -1,5 +1,4 @@
 import { Box, BoxProps } from '@mui/material';
-import { colors } from '../../../constants/styleguide';
 
 export interface WorkflowMobileProps extends BoxProps {}
 
@@ -7,7 +6,7 @@ export const WorkflowMobile = ({ ...restProps }: WorkflowMobileProps) => {
 	return (
 		<Box {...restProps}>
 			<svg
-				width="332"
+				width="100%"
 				height="1991"
 				viewBox="0 0 332 1991"
 				fill="none"

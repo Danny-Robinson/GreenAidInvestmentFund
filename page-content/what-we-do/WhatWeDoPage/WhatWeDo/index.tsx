@@ -17,13 +17,7 @@ export const WhatWeDo = ({ ...restProps }: WhatWeDoProps) => {
 	const isSm = useMobile('sm');
 
 	return (
-		<Box
-			bgcolor={colors.Green1}
-			pt={10}
-			pb={20}
-			// height={{ xs: '2200px', md: '1800px' }}
-			{...restProps}
-		>
+		<Box bgcolor={colors.Green1} pt={5} pb={10} {...restProps}>
 			<Container>
 				<Box display="flex" flexDirection="column">
 					<Txt

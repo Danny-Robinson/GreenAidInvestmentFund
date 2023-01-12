@@ -38,7 +38,7 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
 			<Container>
 				<Box bgcolor={colors.Green3} width="100%" borderRadius="48px">
 					<Grid container>
-						<Grid item sm={12} md={6} order={{ sm: 2, md: 1 }}>
+						<Grid item xs={12} md={6} order={{ xs: 2, md: 1 }}>
 							<Box
 								display="flex"
 								flexDirection="column"
@@ -65,13 +65,13 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
 								</Box>
 							</Box>
 						</Grid>
-						<Grid item sm={12} md={6} order={{ sm: 1, md: 2 }}>
+						<Grid item xs={12} md={6} order={{ xs: 1, md: 2 }}>
 							<Box
 								width="100%"
-								height={{ sm: '400px', md: '100%' }}
+								height={{ xs: '400px', md: '100%' }}
 								position="relative"
 								borderRadius={{
-									sm: '48px 48px 0px 0px',
+									xs: '48px 48px 0px 0px',
 									md: '0px 48px 48px 0px'
 								}}
 								overflow="hidden"
