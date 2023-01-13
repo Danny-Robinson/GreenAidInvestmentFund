@@ -23,17 +23,18 @@ export const WhatWeDo = ({ ...restProps }: WhatWeDoProps) => {
 					<Txt
 						{...txtProps.title}
 						color={colors.White}
-						mb={10}
+						mb={{ xs: 4, sm: 10 }}
 						textAlign="center"
 					>
 						What we do
 					</Txt>
 					<Box
-						pt={4}
+						pt={{ xs: 0, sm: 4 }}
 						display="flex"
 						justifyContent="center"
 						height="100%"
-						width="100%"
+						width={{ xs: 'calc(100% - 32px)', md: '100%' }}
+						px={{ xs: 2, md: 0 }}
 					>
 						{isSm ? (
 							<WorkflowMobile />
