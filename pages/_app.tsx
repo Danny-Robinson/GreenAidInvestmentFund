@@ -1,5 +1,5 @@
 import { NoSsr } from '@mui/base';
-import { Box } from '@mui/material';
+import { Box, createTheme, ThemeProvider } from '@mui/material';
 import { Header } from '../components/Header';
 import { AppProps as NextAppProps } from 'next/app';
 import { HeaderTags } from '../components/HeaderTags';
@@ -18,6 +18,12 @@ interface BodyProps {
 	initialized: boolean;
 }
 
+const theme = createTheme({
+	typography: {
+		fontFamily: ['futura-pt', 'sans-serif'].join(',')
+	}
+});
+
 const Body = ({ Component, pageProps, initialized }: BodyProps) => {
 	return (
 		<>
@@ -27,7 +33,9 @@ const Body = ({ Component, pageProps, initialized }: BodyProps) => {
 
 			<Box component="main">
 				<NoSsr>
-					<Component initialized={initialized} {...pageProps} />
+					<ThemeProvider theme={theme}>
+						<Component initialized={initialized} {...pageProps} />
+					</ThemeProvider>
 				</NoSsr>
 			</Box>
 		</>

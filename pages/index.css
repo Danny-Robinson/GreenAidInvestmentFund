@@ -5,3 +5,18 @@ body {
 html {
 	scroll-behavior: smooth;
 }
+
+@font-face {
+	font-family: 'futura-pt';
+	src: url('../assets/fonts/futura-pt/FuturaPTMedium.otf') format('truetype');
+	font-weight: 450;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'futura-pt';
+	src: url('../assets/fonts/futura-pt/FuturaPTHeavy.otf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
