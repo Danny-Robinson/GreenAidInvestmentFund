@@ -39,6 +39,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 	const [scrollY, setScrollY] = useState(0);
 	const router = useRouter();
 	const isHome = router.pathname === Routes.Home;
+	const isAboutUs = router.pathname.startsWith(Routes.AboutUs);
 
 	const [drawerOpen, setDrawerOpen] = useState(false);
 	const onOpenDrawer = () => setDrawerOpen(true);
@@ -64,7 +65,10 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 	}, [drawerOpen, setDrawerOpen, isXs]);
 
 	const isAtTop = scrollY === 0;
-	const isLightMode = isHome && isAtTop && !drawerOpen;
+	const isLightMode = (isHome || isAboutUs) && isAtTop && !drawerOpen;
+
+	console.log(router.pathname);
+	console.log(Routes.AboutUs);
 
 	const Logo = (
 		<Box display="flex" alignItems="center">

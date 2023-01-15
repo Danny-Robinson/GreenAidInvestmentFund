@@ -12,6 +12,7 @@ const StyledButton = styled(MuiButton)`
 	text-transform: none;
 	padding-right: 24px;
 	padding-left: 24px;
+	border-radius: 8px;
 
 	&:hover {
 		background-color: ${colors.Green3};
@@ -69,7 +70,7 @@ export const Button = (props: ButtonProps) => {
 
 	if (href) {
 		return (
-			<Link href={href} passHref linkProps={{ underline: 'never' }}>
+			<Link href={href} linkProps={{ underline: 'never' }}>
 				{BaseButton}
 			</Link>
 		);

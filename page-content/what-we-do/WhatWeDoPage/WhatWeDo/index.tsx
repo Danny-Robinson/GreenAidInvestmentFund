@@ -39,7 +39,7 @@ export const WhatWeDo = ({ ...restProps }: WhatWeDoProps) => {
 						{isSm ? (
 							<WorkflowMobile />
 						) : (
-							<WorkflowDesktop width="100%" />
+							<WorkflowDesktop width="70%" />
 						)}
 					</Box>
 				</Box>

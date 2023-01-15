@@ -27,10 +27,12 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
 						color={colors.Green1}
 					>
 						Green Aid is an investment fund focused on accelerating
-						private sector investments into high-impact nature-based
-						solutions globally.
+						private sector investments into high-impact nature and
+						technology based solutions globally.
 					</Txt>
-					<Button href={Routes.WhatWeDo}>Find out more</Button>
+					<Button href={Routes.WhatWeDo}>
+						<Txt {...txtProps.body2}>Find out more</Txt>
+					</Button>
 				</Box>
 			</Container>
 		</Box>

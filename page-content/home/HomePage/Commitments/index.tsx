@@ -38,9 +38,14 @@ export const Commitments = ({ ...restProps }: CommitmentsProps) => {
 		<Box py={15} {...restProps}>
 			<Container>
 				<Grid container spacing={4}>
-					{COPY.map((text) => {
+					{COPY.map((text, index) => {
 						return (
-							<Grid item xs={12} sm={12 / 5}>
+							<Grid
+								key={`commitment-${index}`}
+								item
+								xs={12}
+								sm={12 / 5}
+							>
 								<Commitment text={text} />
 							</Grid>
 						);

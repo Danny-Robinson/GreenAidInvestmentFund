@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material';
+import { Grid, Skeleton } from '@mui/material';
 import { Container } from '@mui/system';
 import { Box, BoxProps } from '../../../../components/Box';
 import { BulletPoint } from '../../../../components/Icons/BulletPoint';
@@ -6,6 +6,8 @@ import { Txt } from '../../../../components/Txt';
 import { colors, txtProps } from '../../../../constants/styleguide';
 import Image from 'next/image';
 import { useMobile } from '../../../../utils/useMobile';
+import { useState } from 'react';
+import { LogoSymbol } from '../../../../components/Icons/LogoSymbol';
 
 export interface ApproachProps extends BoxProps {}
 
@@ -15,7 +17,7 @@ interface BulletProps extends BoxProps {
 const Bullet = ({ text, ...restProps }: BulletProps) => {
 	return (
 		<Box display="flex" {...restProps}>
-			<BulletPoint mr={1} />
+			<LogoSymbol mr={1} variant="green" />
 			<Txt {...txtProps.body2} color={colors.Green1} display="inline">
 				{text}
 			</Txt>
@@ -32,6 +34,9 @@ const COPY = [
 
 export const Approach = ({ ...restProps }: ApproachProps) => {
 	const isMd = useMobile('md');
+
+	const [imageLoaded, setImageLoaded] = useState(false);
+	const onLoad = () => setImageLoaded(true);
 
 	return (
 		<Box bgcolor={colors.White} py={8} {...restProps}>
@@ -76,10 +81,18 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
 								}}
 								overflow="hidden"
 							>
+								{!imageLoaded && (
+									<Skeleton
+										width="100%"
+										height="100%"
+										variant="rectangular"
+									/>
+								)}
 								<Image
 									src="/img/valley.webp"
 									alt="valley-image"
 									fill
+									onLoad={onLoad}
 									{...(isMd && { objectFit: 'cover' })}
 								/>
 							</Box>

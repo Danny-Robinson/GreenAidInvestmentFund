@@ -64,15 +64,6 @@ export const Footer = ({ ...restProps }: FooterProps) => {
 			>
 				<Txt {...txtProps.headline2}>Contact Us</Txt>
 			</Box>
-			<Box
-				component={Link}
-				href={'https://uk.linkedin.com/'}
-				external
-				linkProps={linkProps}
-				{...(!isXs && { mr: 2 })}
-			>
-				<StyledTxt {...txtProps.headline2}>LinkedIn (TODO)</StyledTxt>
-			</Box>
 		</Box>
 	);
 
@@ -108,10 +99,6 @@ export const Footer = ({ ...restProps }: FooterProps) => {
 		</Box>
 	);
 
-	const Copyright = (
-		<Txt color={colors.White}>@ Any copyright message here</Txt>
-	);
-
 	return (
 		<Box
 			bgcolor={colors.Black}
@@ -139,8 +126,23 @@ export const Footer = ({ ...restProps }: FooterProps) => {
 						? { alignItems: 'center' }
 						: { justifyContent: 'space-between' })}
 				>
-					{Copyright}
-					{LegalLinks}
+					<Box
+						component={Link}
+						href={'www.linkedin.com'}
+						linkProps={linkProps}
+						external
+						{...(isXs && { mb: 2 })}
+					>
+						<StyledTxt {...txtProps.body2}>
+							Find us on LinkedIn
+						</StyledTxt>
+					</Box>
+					<Box display="flex">
+						{LegalLinks}
+						<Txt color={colors.White} ml={2}>
+							@ Any copyright message here
+						</Txt>
+					</Box>
 				</Box>
 			</Container>
 		</Box>

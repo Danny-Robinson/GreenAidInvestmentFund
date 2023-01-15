@@ -1,5 +1,6 @@
-import { Box, BoxProps, Container } from '@mui/material';
+import { Box, BoxProps, Container, Skeleton } from '@mui/material';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Txt } from '../../../../components/Txt';
 import {
 	breakpoints,
@@ -19,31 +20,47 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 	};
 
 	const isXs = useMobile('xs');
+	const [imageLoaded, setImageLoaded] = useState(false);
+	const onLoad = () => setImageLoaded(true);
 
 	return (
 		<Box {...restProps}>
 			<Box width="100%" height={imageHeight} position="relative">
+				{!imageLoaded && (
+					<Skeleton
+						width="100%"
+						height="100%"
+						variant="rectangular"
+					/>
+				)}
 				<Image
 					src="/img/splash.webp"
 					alt="splash-image"
 					fill
+					onLoad={onLoad}
 					{...(isXs && { objectFit: 'cover' })}
 				/>
-				<Box position="absolute" width="100%" top={'calc(50% - 60px)'}>
-					<Container>
-						<Box display="flex" justifyContent="center">
-							<Txt
-								{...txtProps.title}
-								color={colors.White}
-								maxWidth="450px"
-								textAlign="center"
-							>
-								Accelerating private sector investments into a
-								net-zero future
-							</Txt>
-						</Box>
-					</Container>
-				</Box>
+				{imageLoaded && (
+					<Box
+						position="absolute"
+						width="100%"
+						top={'calc(50% - 60px)'}
+					>
+						<Container>
+							<Box display="flex" justifyContent="center">
+								<Txt
+									{...txtProps.title}
+									color={colors.White}
+									maxWidth="450px"
+									textAlign="center"
+								>
+									Accelerating private sector investments into
+									a net-zero future
+								</Txt>
+							</Box>
+						</Container>
+					</Box>
+				)}
 			</Box>
 		</Box>
 	);
