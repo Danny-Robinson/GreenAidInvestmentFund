@@ -1,6 +1,7 @@
 import { Box, BoxProps, Container, Grid, Skeleton } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
+import { GradientBox } from '../../../components/GradientBox';
 import { Txt } from '../../../components/Txt';
 import { breakpoints, colors, txtProps } from '../../../constants/styleguide';
 import { useMobile } from '../../../utils/useMobile';
@@ -88,6 +89,15 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 						variant="rectangular"
 					/>
 				)}
+				<GradientBox
+					position="absolute"
+					height="100%"
+					width="calc(50% - 22px)"
+					right={0}
+					direction="bottom"
+					zIndex={2}
+					rgbColor={'0,2,0'}
+				/>
 				<Image
 					src="/img/about-us-splash.png"
 					alt="splash-image"
