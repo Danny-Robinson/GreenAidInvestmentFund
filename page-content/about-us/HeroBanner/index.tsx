@@ -92,7 +92,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 				<GradientBox
 					position="absolute"
 					height="100%"
-					width="calc(50% - 22px)"
+					width="45%"
 					right={0}
 					direction="bottom"
 					zIndex={2}
