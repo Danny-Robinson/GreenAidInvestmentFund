@@ -17,7 +17,7 @@ interface BulletProps extends BoxProps {
 const Bullet = ({ text, ...restProps }: BulletProps) => {
 	return (
 		<Box display="flex" {...restProps}>
-			<LogoSymbol mr={1} variant="green" />
+			<LogoSymbol mr={2} variant="green" />
 			<Txt {...txtProps.body2} color={colors.Green1} display="inline">
 				{text}
 			</Txt>
