@@ -36,6 +36,10 @@ const Body = ({ Component, pageProps, initialized }: BodyProps) => {
 					<ThemeProvider theme={theme}>
 						<Component initialized={initialized} {...pageProps} />
 					</ThemeProvider>
+
+					<footer>
+						<Footer />
+					</footer>
 				</NoSsr>
 			</Box>
 		</>
@@ -66,9 +70,6 @@ function CustomApp({ Component, pageProps }: AppProps) {
 				Component={Component}
 				initialized={initialized}
 			/>
-			<footer>
-				<Footer />
-			</footer>
 		</>
 	);
 }
