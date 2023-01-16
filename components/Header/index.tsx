@@ -67,9 +67,6 @@ export const Header = ({ ...restProps }: HeaderProps) => {
 	const isAtTop = scrollY === 0;
 	const isLightMode = (isHome || isAboutUs) && isAtTop && !drawerOpen;
 
-	console.log(router.pathname);
-	console.log(Routes.AboutUs);
-
 	const Logo = (
 		<Box display="flex" alignItems="center">
 			<LogoSymbol variant={isLightMode ? 'light' : 'dark'} mr={2} />
