@@ -34,7 +34,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 					/>
 				)}
 				<Image
-					src="/img/splash.webp"
+					src={isXs ? '/img/splash.webp' : '/img/splash2.webp'}
 					alt="splash-image"
 					fill
 					onLoad={onLoad}
