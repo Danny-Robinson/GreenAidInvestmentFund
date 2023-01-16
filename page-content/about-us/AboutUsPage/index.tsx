@@ -7,6 +7,7 @@ import {
 } from '../../../constants';
 import { PageMeta } from '../../../types/next';
 import { getPageMeta } from '../../../utils/getPageMeta';
+import { Founders } from '../Founders';
 import { HeroBanner } from '../HeroBanner';
 
 export const getStaticProps: GetStaticProps<{
@@ -32,6 +33,7 @@ export const AboutUsPage = () => {
 	return (
 		<>
 			<HeroBanner />
+			<Founders />
 		</>
 	);
 };
