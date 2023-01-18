@@ -89,15 +89,19 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 						variant="rectangular"
 					/>
 				)}
-				<GradientBox
-					position="absolute"
-					height="100%"
-					width="45%"
-					right={0}
-					direction="bottom"
-					zIndex={2}
-					rgbColor={'0,2,0'}
-				/>
+				{imageLoaded && (
+					<GradientBox
+						position="absolute"
+						height="100px"
+						width="45%"
+						right={0}
+						direction="bottom"
+						zIndex={2}
+						rgbColor={'0,2,0'}
+						strength1={'0'}
+						strength2={'0.2'}
+					/>
+				)}
 				<Image
 					src="/img/about-us-splash.png"
 					alt="splash-image"

@@ -29,10 +29,12 @@ const Founder = ({ name, bio, src, title, ...restProps }: FounderProps) => {
 		>
 			<Box width="200px" height="270px" position="relative" mb={6}>
 				{!imageLoaded && (
-					<Skeleton
+					<Box
+						component={Skeleton}
 						width="100%"
 						height="100%"
 						variant="rectangular"
+						borderRadius="32px"
 					/>
 				)}
 				<Image src={src} alt="splash-image" fill onLoad={onLoad} />
