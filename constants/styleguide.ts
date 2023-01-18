@@ -7,7 +7,7 @@ export const colors = {
   Green2: '#93C330',
   Green3: '#C9E873',
   Green4: '#E4FFB5',
-  White: '#FCFCF7',
+  White: '#FFFFF0',
 };
 
 export const txtProps = {

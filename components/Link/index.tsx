@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { FC } from 'react';
 import { LinkProps as MuiLinkProps } from '@mui/material/Link';
 import dynamic from 'next/dynamic';
+import { colors } from '../../constants/styleguide';
 
 const MuiLink = dynamic(() => import('@mui/material/Link'), {
   ssr: false,
@@ -64,6 +65,6 @@ export const Link = styled(PrestyledLink)`
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline !important;
+    color: ${colors.Green2} !important;
   }
 `;

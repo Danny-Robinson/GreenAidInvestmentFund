@@ -6,10 +6,8 @@ import { Swiper } from '../../../../components/Swiper';
 import { Txt } from '../../../../components/Txt';
 import { colors, txtProps } from '../../../../constants/styleguide';
 import { useMobile } from '../../../../utils/useMobile';
-import { Thumbs } from 'swiper';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { GradientBox } from '../../../../components/GradientBox';
-import { SwiperEvents } from 'swiper/types';
 
 export interface CommitmentsProps extends BoxProps {}
 
@@ -35,9 +33,9 @@ const Commitment = ({
       flexDirection="column"
       alignItems="center"
       bgcolor={colors.White}
-      p={8}
+      p={4}
       borderRadius="30px"
-      minHeight={'12vw'}
+      minHeight="130px"
     >
       {isXs && !selected && (
         <GradientBox
@@ -53,7 +51,7 @@ const Commitment = ({
         />
       )}
       <LogoSymbol variant="green" mb={4} />
-      <Txt {...txtProps.body2} color={colors.Black} textAlign="center">
+      <Txt {...txtProps.body2} color={colors.Green1} textAlign="center">
         {text}
       </Txt>
     </Box>
@@ -70,50 +68,52 @@ export const Commitments = ({ ...restProps }: CommitmentsProps) => {
     setSelectedIndex(swiper.realIndex);
   };
 
-  // useEffect(() => {
-  // 	if (swiper?.realIndex !== selectedIndex) {
-  // 		setSelectedIndex(swiper?.realIndex);
-  // 	}
-  // }, [swiper, selectedIndex, setSelectedIndex]);
-
   const onChangeSwiper = (index: number) => swiper?.slideTo(index);
+
+  const content = (
+    <>
+      <Swiper
+        onSwiper={setSwiper}
+        watchSlidesProgress
+        spaceBetween={isXs ? 10 : 50}
+        centeredSlides={isXs}
+        slidesPerView={isXs ? 1.5 : isSm ? 2 : 3}
+        onSlideChange={onSlideChange}
+        autoplay={{
+          delay: 10000,
+          disableOnInteraction: false,
+        }}
+      >
+        {COPY.map((text, index) => (
+          <SwiperSlide key={`swiper-slide-${index}`}>
+            <Commitment text={text} selected={index === selectedIndex} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+      <Box display="flex" width="100%" justifyContent="center" mt={4}>
+        {(isXs ? COPY : [0, 1]).map((_item, index) => {
+          const selected = index === selectedIndex;
+          const onClick = () => onChangeSwiper(index);
+
+          return (
+            <Box
+              key={`swiper-control-${index}`}
+              borderRadius="50%"
+              height={10}
+              width={10}
+              onClick={onClick}
+              bgcolor={selected ? colors.Green2 : colors.Green4}
+              ml={2}
+            />
+          );
+        })}
+      </Box>
+    </>
+  );
 
   return (
     <Box py={15} bgcolor={colors.Green1} {...restProps}>
-      <Container>
-        <Swiper
-          onSwiper={setSwiper}
-          watchSlidesProgress
-          spaceBetween={50}
-          centeredSlides={isXs}
-          slidesPerView={isXs ? 1.5 : isSm ? 2 : 3}
-          onSlideChange={onSlideChange}
-        >
-          {COPY.map((text, index) => (
-            <SwiperSlide key={`swiper-slide-${index}`}>
-              <Commitment text={text} selected={index === selectedIndex} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-        <Box display="flex" width="100%" justifyContent="center" mt={4}>
-          {(isXs ? COPY : [0, 1]).map((_item, index) => {
-            const selected = index === selectedIndex;
-            const onClick = () => onChangeSwiper(index);
-
-            return (
-              <Box
-                key={`swiper-control-${index}`}
-                borderRadius="50%"
-                height={10}
-                width={10}
-                onClick={onClick}
-                bgcolor={selected ? colors.Green2 : colors.Green4}
-                ml={2}
-              />
-            );
-          })}
-        </Box>
-      </Container>
+      {isXs ? content : <Container>{content}</Container>}
     </Box>
   );
 };
