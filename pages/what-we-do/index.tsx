@@ -1,6 +1,6 @@
 import {
-	WhatWeDoPage,
-	getStaticProps
+  WhatWeDoPage,
+  getStaticProps,
 } from '../../page-content/what-we-do/WhatWeDoPage';
 
 export { getStaticProps };

@@ -1,9 +1,9 @@
 import { GetStaticProps } from 'next';
 import {
-	GENERIC_DESCRIPTION,
-	GENERIC_IMAGE,
-	GENERIC_TITLE,
-	Routes
+  GENERIC_DESCRIPTION,
+  GENERIC_IMAGE,
+  GENERIC_TITLE,
+  Routes,
 } from '../../../constants';
 import { PageMeta } from '../../../types/next';
 import { getPageMeta } from '../../../utils/getPageMeta';
@@ -12,30 +12,30 @@ import { HeroBanner } from './HeroBanner';
 import { WhatIsGreenAid } from './WhatIsGreenAid';
 
 export const getStaticProps: GetStaticProps<{
-	meta: PageMeta;
+  meta: PageMeta;
 }> = async () => {
-	const title = GENERIC_TITLE;
-	const description = GENERIC_DESCRIPTION;
-	const image = GENERIC_IMAGE;
+  const title = GENERIC_TITLE;
+  const description = GENERIC_DESCRIPTION;
+  const image = GENERIC_IMAGE;
 
-	return {
-		props: {
-			meta: getPageMeta({
-				title,
-				description,
-				url: Routes.Home,
-				image
-			})
-		}
-	};
+  return {
+    props: {
+      meta: getPageMeta({
+        title,
+        description,
+        url: Routes.Home,
+        image,
+      }),
+    },
+  };
 };
 
 export const HomePage = () => {
-	return (
-		<>
-			<HeroBanner />
-			<WhatIsGreenAid />
-			<Commitments />
-		</>
-	);
+  return (
+    <>
+      <HeroBanner />
+      <WhatIsGreenAid />
+      <Commitments />
+    </>
+  );
 };
