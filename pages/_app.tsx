@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import './index.css';
-// import { Html } from 'next/document';
 
 interface AppProps extends NextAppProps {
   Component: any;
