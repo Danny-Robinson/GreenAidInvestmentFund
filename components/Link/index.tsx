@@ -65,6 +65,10 @@ export const Link = styled(PrestyledLink)`
   text-decoration: none;
 
   &:hover {
-    color: ${colors.Green2} !important;
+    a {
+      p {
+        color: ${colors.Green3};
+      }
+    }
   }
 `;

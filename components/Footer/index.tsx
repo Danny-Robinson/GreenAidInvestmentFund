@@ -13,7 +13,7 @@ export const StyledTxt = styled(Txt)`
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline !important;
+    color: ${colors.Green3};
   }
 `;
 
