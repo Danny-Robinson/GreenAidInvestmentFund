@@ -13,7 +13,8 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
     xs: 'calc(33vh)',
     sm: 'calc(100vw / 1.5) ',
     md: `calc(max(100vw / 2.25, ${breakpoints.values.md}px / 2.25))`,
-    lg: `calc(max(100vw / 3, ${breakpoints.values.lg}px / 3))`,
+    lg: `calc(max(100vw / 2.5, ${breakpoints.values.lg}px / 2.5))`,
+    xl: `calc(max(100vw / 4, ${breakpoints.values.xl}px / 4))`,
   };
 
   const isSm = useMobile('sm');
@@ -22,7 +23,11 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 
   const text = (
     <>
-      <Txt {...txtProps.headline1} color={colors.White} maxWidth="450px">
+      <Txt
+        {...txtProps.headline1}
+        color={colors.White}
+        maxWidth={{ xs: '100%', md: '410px' }}
+      >
         In order to protect the integrity of the voluntary carbon market, we
         must place a strong emphasis on the additional co-benefits that our
         projects provide. Focus on climate is not enough. A positive impact on
