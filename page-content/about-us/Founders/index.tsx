@@ -6,21 +6,7 @@ import { Txt } from '../../../components/Txt';
 import { useState } from 'react';
 import { Grid, Skeleton } from '@mui/material';
 import { BulletPoint } from '../../../components/Icons/BulletPoint';
-import { motion, Variants } from 'framer-motion';
-
-const cardVariants: Variants = {
-  offscreen: {
-    y: 100,
-  },
-  onscreen: {
-    y: 0,
-    transition: {
-      type: 'spring',
-      bounce: 0.4,
-      duration: 2,
-    },
-  },
-};
+import { Animate } from '../../../components/Animate';
 
 export interface FoundersProps extends BoxProps {}
 
@@ -62,11 +48,7 @@ const Founder = ({ name, bio, src, title, ...restProps }: FounderProps) => {
         )}
         <Image src={src} alt="splash-image" fill onLoad={onLoad} />
       </Box>
-      <motion.div
-        initial="offscreen"
-        whileInView="onscreen"
-        variants={cardVariants}
-      >
+      <Animate>
         <Txt {...txtProps.headline1} color={colors.Green1} mb={4}>
           {name}
         </Txt>
@@ -77,7 +59,7 @@ const Founder = ({ name, bio, src, title, ...restProps }: FounderProps) => {
         <Txt {...txtProps.body3} color={colors.Green1}>
           {title}
         </Txt>
-      </motion.div>
+      </Animate>
     </Box>
   );
 };
