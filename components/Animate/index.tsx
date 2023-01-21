@@ -1,6 +1,5 @@
-import { Box, BoxProps } from '../Box';
 import { motion, Variants } from 'framer-motion';
-import { ReactNode, useState } from 'react';
+import { ReactNode } from 'react';
 
 const defaultVariants: Variants = {
   offscreen: {
@@ -22,15 +21,12 @@ export interface AnimateProps {
 }
 
 export const Animate = ({ variants, children }: AnimateProps) => {
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const onAnimationComplete = () => setHasAnimated(true);
-
   return (
     <motion.div
       initial="offscreen"
       whileInView="onscreen"
-      onAnimationComplete={onAnimationComplete}
-      variants={!hasAnimated ? variants || defaultVariants : {}}
+      viewport={{ once: true }}
+      variants={variants || defaultVariants}
     >
       {children}
     </motion.div>
