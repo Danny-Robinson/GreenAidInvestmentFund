@@ -8,6 +8,7 @@ import { colors, txtProps } from '../../../../constants/styleguide';
 import { useMobile } from '../../../../utils/useMobile';
 import { useState } from 'react';
 import { GradientBox } from '../../../../components/GradientBox';
+import { Animate } from '../../../../components/Animate';
 
 export interface CommitmentsProps extends BoxProps {}
 
@@ -35,7 +36,7 @@ const Commitment = ({
       bgcolor={colors.White}
       p={4}
       borderRadius="30px"
-      minHeight="130px"
+      minHeight={{ xs: '130px', sm: '150px' }}
     >
       {isXs && !selected && (
         <GradientBox
@@ -113,7 +114,13 @@ export const Commitments = ({ ...restProps }: CommitmentsProps) => {
 
   return (
     <Box py={15} bgcolor={colors.Green1} {...restProps}>
-      {isXs ? content : <Container>{content}</Container>}
+      {isXs ? (
+        content
+      ) : (
+        <Container>
+          <Animate>{content}</Animate>
+        </Container>
+      )}
     </Box>
   );
 };

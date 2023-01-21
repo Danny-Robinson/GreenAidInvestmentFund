@@ -1,4 +1,5 @@
 import { Divider, Grid } from '@mui/material';
+import { Animate } from '../../../../components/Animate';
 import { Box, BoxProps } from '../../../../components/Box';
 import { Button } from '../../../../components/Button';
 import { Txt } from '../../../../components/Txt';
@@ -67,17 +68,19 @@ export const CurrentOpenings = ({ ...restProps }: CurrentOpeningsProps) => {
       px={15}
       {...restProps}
     >
-      <Txt {...txtProps.title} color={colors.White} textAlign="center" mb={7}>
-        Current Openings (demo)
-      </Txt>
+      <Animate>
+        <Txt {...txtProps.title} color={colors.White} textAlign="center" mb={7}>
+          Current Openings (demo)
+        </Txt>
+      </Animate>
       {OPENINGS.map((opening, index) => {
         return (
-          <>
-            <Opening key={`${opening.title}-${index}`} {...opening} />
+          <Animate key={`${opening.title}-${index}`}>
+            <Opening {...opening} />
             {index !== OPENINGS.length - 1 && (
               <Box component={Divider} bgcolor={colors.White} my={5} />
             )}
-          </>
+          </Animate>
         );
       })}
     </Box>

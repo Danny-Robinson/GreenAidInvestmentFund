@@ -1,4 +1,5 @@
 import { Container } from '@mui/material';
+import { Animate } from '../../../components/Animate';
 import { Box, BoxProps } from '../../../components/Box';
 import { Button } from '../../../components/Button';
 import { Txt } from '../../../components/Txt';
@@ -18,20 +19,23 @@ export const JoinOurTeam = ({ ...restProps }: JoinOurTeamProps) => {
           py={15}
           textAlign="center"
         >
-          <Txt {...txtProps.title} color={colors.Green1} mb={6}>
-            Join Our Team
-          </Txt>
-          <Txt
-            {...txtProps.body1}
-            color={colors.Green1}
-            mb={6}
-            maxWidth={{ xs: '100%', sm: '60%' }}
-          >
-            We are always looking to hear from talented individuals. You can
-            find our job opening below or contact us if you think you can add to
-            our team.
-          </Txt>
-          <Button href="www.google.com">Contact us (link to do)</Button>
+          <Animate>
+            <Txt {...txtProps.title} color={colors.Green1} mb={6}>
+              Join Our Team
+            </Txt>
+          </Animate>
+          <Box maxWidth={{ xs: '100%', sm: '60%' }}>
+            <Animate>
+              <Txt {...txtProps.body1} color={colors.Green1} mb={6}>
+                We are always looking to hear from talented individuals. You can
+                find our job opening below or contact us if you think you can
+                add to our team.
+              </Txt>
+            </Animate>
+          </Box>
+          <Animate>
+            <Button href="www.google.com">Contact us (link to do)</Button>
+          </Animate>
         </Box>
         <CurrentOpenings mb={8} />
       </Container>

@@ -52,10 +52,16 @@ const Founder = ({ name, bio, src, title, ...restProps }: FounderProps) => {
         <Txt {...txtProps.headline1} color={colors.Green1} mb={4}>
           {name}
         </Txt>
+      </Animate>
+      <Animate>
         <Txt {...txtProps.body2} color={colors.Green1} mb={3}>
           {bio}
         </Txt>
+      </Animate>
+      <Animate>
         <BulletPoint mb={3} />
+      </Animate>
+      <Animate>
         <Txt {...txtProps.body3} color={colors.Green1}>
           {title}
         </Txt>

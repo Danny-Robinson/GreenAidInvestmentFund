@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { useMobile } from '../../../../utils/useMobile';
 import { useState } from 'react';
 import { LogoSymbol } from '../../../../components/Icons/LogoSymbol';
+import { Animate } from '../../../../components/Animate';
 
 export interface ApproachProps extends BoxProps {}
 
@@ -51,17 +52,21 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
                 py={10}
               >
                 <Box px={12}>
-                  <Txt {...txtProps.title} color={colors.Green1} mb={6}>
-                    The Green Aid Approach
-                  </Txt>
+                  <Animate>
+                    <Txt {...txtProps.title} color={colors.Green1} mb={6}>
+                      The Green Aid Approach
+                    </Txt>
+                  </Animate>
 
                   {COPY.map((text, index) => (
-                    <Bullet
-                      {...(index < COPY.length && {
-                        mb: 3,
-                      })}
-                      text={text}
-                    />
+                    <Animate key={`approach-${index}`}>
+                      <Bullet
+                        {...(index < COPY.length && {
+                          mb: 3,
+                        })}
+                        text={text}
+                      />
+                    </Animate>
                   ))}
                 </Box>
               </Box>
