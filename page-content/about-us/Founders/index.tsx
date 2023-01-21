@@ -43,7 +43,14 @@ const Founder = ({ name, bio, src, title, ...restProps }: FounderProps) => {
       textAlign="center"
       {...restProps}
     >
-      <Box width="200px" height="270px" position="relative" mb={6}>
+      <Box
+        width="200px"
+        height="270px"
+        position="relative"
+        mb={6}
+        borderRadius="32px"
+        overflow="hidden"
+      >
         {!imageLoaded && (
           <Box
             component={Skeleton}

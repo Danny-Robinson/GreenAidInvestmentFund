@@ -137,7 +137,7 @@ export const Footer = ({ ...restProps }: FooterProps) => {
           </Box>
           <Box display="flex">
             {LegalLinks}
-            <Txt color={colors.White} ml={2}>
+            <Txt {...txtProps.body2} color={colors.White} ml={2}>
               @ Any copyright message here
             </Txt>
           </Box>

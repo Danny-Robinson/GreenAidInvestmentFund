@@ -21,15 +21,22 @@ const StyledButton = styled(MuiButton)`
 
 export const Link = styled(PrestyledLink)`
   text-decoration: none;
+
+  a {
+    p {
+      font-family: futura-pt;
+    }
+  }
 `;
 
 export interface ButtonProps extends MaterialButtonProps {
   loading?: boolean;
   newTab?: boolean;
+  external?: boolean;
 }
 
 export const Button = (props: ButtonProps) => {
-  const { children, loading, newTab, href, ...restProps } = props;
+  const { children, loading, newTab, href, external, ...restProps } = props;
 
   const circularProgressProps = {
     size: 15,
@@ -67,7 +74,7 @@ export const Button = (props: ButtonProps) => {
 
   if (href) {
     return (
-      <Link href={href} linkProps={{ underline: 'never' }}>
+      <Link href={href} external={external} linkProps={{ underline: 'never' }}>
         {BaseButton}
       </Link>
     );

@@ -42,6 +42,7 @@ export const Txt = styled(MuiTypography, {
   shouldForwardProp: (prop: string) =>
     !['textTransform', 'lineClamp', 'textDecoration'].includes(prop),
 })`
+  font-family: futura-pt;
   ${(props: TxtProps) => `
         ${getLineClampProperties(props.lineClamp)}
         ${getTextTransform(props.textTransform)}

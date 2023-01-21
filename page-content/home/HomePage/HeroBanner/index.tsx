@@ -16,7 +16,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
     xs: 'calc(75vh)',
     sm: 'calc(100vw / 1.5) ',
     md: `calc(max(100vw / 2.25, ${breakpoints.values.md}px / 2.25))`,
-    lg: `calc(max(100vw / 3, ${breakpoints.values.lg}px / 3))`,
+    lg: `calc(max(100vw / 2, ${breakpoints.values.lg}px / 2))`,
   };
 
   const isXs = useMobile('xs');

@@ -64,6 +64,12 @@ export const PrestyledLink = ({
 export const Link = styled(PrestyledLink)`
   text-decoration: none;
 
+  a {
+    p {
+      font-family: futura-pt;
+    }
+  }
+
   &:hover {
     a {
       p {

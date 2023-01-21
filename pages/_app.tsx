@@ -22,6 +22,16 @@ const theme = createTheme({
   typography: {
     fontFamily: ['futura-pt', 'sans-serif'].join(','),
   },
+  components: {
+    MuiLink: {
+      styleOverrides: {
+        root: {
+          cursor: 'pointer',
+          fontFamily: ['futura-pt', 'sans-serif'].join(','),
+        },
+      },
+    },
+  },
 });
 
 const Body = ({ Component, pageProps, initialized }: BodyProps) => {

@@ -1,7 +1,6 @@
 import { Box, BoxProps, Container, Grid, Skeleton } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
-import { GradientBox } from '../../../components/GradientBox';
 import { Txt } from '../../../components/Txt';
 import { breakpoints, colors, txtProps } from '../../../constants/styleguide';
 import { useMobile } from '../../../utils/useMobile';
@@ -23,22 +22,18 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 
   const text = (
     <>
+      <Txt {...txtProps.title} color={colors.White}>
+        Get Touch
+      </Txt>
       <Txt
-        {...txtProps.headline1}
+        {...txtProps.body1}
         color={colors.White}
+        mt={2}
+        mb={10}
         maxWidth={{ xs: '100%', md: '410px' }}
       >
-        In order to protect the integrity of the voluntary carbon market, we
-        must place a strong emphasis on the additional co-benefits that our
-        projects provide. Focus on climate is not enough. A positive impact on
-        biodiversity, local communities, and all other stakeholders is
-        paramount.
-      </Txt>
-      <Txt {...txtProps.body1} color={colors.White} mt={2} mb={10}>
-        <Txt fontWeight={700} display="inline">
-          Leopold Rebilly
-        </Txt>{' '}
-        - Co-founder
+        You can reach out to us by email or find us on LinkedIn and we will get
+        back to you as soon as possible
       </Txt>
     </>
   );
@@ -58,7 +53,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
                 <Skeleton width="100%" height="100%" variant="rectangular" />
               )}
               <Image
-                src="/img/about-us-splash2.webp"
+                src="/img/contact-us-splash2.webp"
                 alt="splash-image"
                 fill
                 onLoad={onLoad}
@@ -77,21 +72,8 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
         {!imageLoaded && (
           <Skeleton width="100%" height="100%" variant="rectangular" />
         )}
-        {imageLoaded && (
-          <GradientBox
-            position="absolute"
-            height="100px"
-            width="45%"
-            right={0}
-            direction="bottom"
-            zIndex={2}
-            rgbcolor={'0,2,0'}
-            strength1={'0'}
-            strength2={'0.2'}
-          />
-        )}
         <Image
-          src="/img/about-us-splash.webp"
+          src="/img/contact-us-splash.webp"
           alt="splash-image"
           fill
           onLoad={onLoad}
@@ -102,7 +84,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
             <Container>
               <Box
                 display="flex"
-                pt={{ xs: 0, sm: 10, md: 15 }}
+                pt={{ xs: 0, sm: 10, md: 25 }}
                 flexDirection="column"
               >
                 {text}
