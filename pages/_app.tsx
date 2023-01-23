@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import { Footer } from '../components/Footer';
 import './index.css';
+import { GoogleTags } from '../components/GoogleTag';
 
 interface AppProps extends NextAppProps {
   Component: any;
@@ -72,6 +73,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <HeaderTags meta={pageProps?.meta} />
+      <GoogleTags />
       <Body
         pageProps={pageProps}
         Component={Component}
