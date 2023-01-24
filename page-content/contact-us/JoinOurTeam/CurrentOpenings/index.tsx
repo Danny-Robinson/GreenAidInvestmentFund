@@ -55,7 +55,7 @@ const OPENINGS = [
     title: 'A complicated job title',
     description:
       'Short description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur iaculis felis id nunc fringilla iaculis. Sed sed odio nec urna molestie aliquam. Vivamus elit eli',
-    link: 'www.google.com',
+    link: 'https://www.google.com',
   },
 ];
 

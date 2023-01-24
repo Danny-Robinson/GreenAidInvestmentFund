@@ -128,7 +128,7 @@ export const Footer = ({ ...restProps }: FooterProps) => {
         >
           <Box
             component={Link}
-            href={'www.linkedin.com'}
+            href={'https://www.linkedin.com'}
             linkProps={linkProps}
             external
             {...(isXs && { mb: 2 })}

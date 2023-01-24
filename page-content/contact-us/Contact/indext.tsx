@@ -63,7 +63,7 @@ export const Contact = ({ ...restProps }: ContactProps) => {
               method={
                 <Box
                   component={Link}
-                  href={'www.linkedin.com'}
+                  href={'https://www.linkedin.com'}
                   linkProps={{
                     color: colors.Black,
                     underline: 'never',
