@@ -15,6 +15,7 @@ import { Txt } from '../Txt';
 import { Hamburger } from '../Icons/Hamburger';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
+import { Close } from '../Icons/Close';
 
 export interface HeaderProps extends BoxProps {}
 
@@ -89,27 +90,30 @@ export const Header = ({ ...restProps }: HeaderProps) => {
         href={Routes.WhatWeDo}
         linkProps={linkProps}
         mx={2}
+        {...(drawerOpen && { mb: 5 })}
         {...closeDrawerOnLink}
       >
-        <Txt {...txtProps.headline2}>What We Do</Txt>
+        <Txt {...txtProps.headline1}>What We Do</Txt>
       </Box>
       <Box
         component={Link}
         href={Routes.AboutUs}
         linkProps={linkProps}
         mx={2}
+        {...(drawerOpen && { my: 5 })}
         {...closeDrawerOnLink}
       >
-        <Txt {...txtProps.headline2}>About Us</Txt>
+        <Txt {...txtProps.headline1}>About Us</Txt>
       </Box>
       <Box
         component={Link}
         href={Routes.ContactUs}
         linkProps={linkProps}
         mx={2}
+        {...(drawerOpen && { my: 5 })}
         {...closeDrawerOnLink}
       >
-        <Txt {...txtProps.headline2}>Contact Us</Txt>
+        <Txt {...txtProps.headline1}>Contact Us</Txt>
       </Box>
     </>
   );
@@ -118,8 +122,10 @@ export const Header = ({ ...restProps }: HeaderProps) => {
     <>
       {isXs && (
         <StyledDrawer anchor="right" open={drawerOpen} onClose={onCloseDrawer}>
-          <Box pt={8} bgcolor={colors.White} height="100%">
-            <Container>{Links}</Container>
+          <Box pt={25} bgcolor={colors.White} height="100%">
+            <Container>
+              <Box textAlign="center">{Links}</Box>
+            </Container>
           </Box>
         </StyledDrawer>
       )}
@@ -139,7 +145,9 @@ export const Header = ({ ...restProps }: HeaderProps) => {
             <Box display="flex" alignItems="center">
               {isXs ? (
                 drawerOpen ? (
-                  <Box onClick={onCloseDrawer}>close icon</Box>
+                  <Box onClick={onCloseDrawer}>
+                    <Close />
+                  </Box>
                 ) : (
                   <Hamburger
                     variant={isLightMode ? 'light' : 'dark'}
