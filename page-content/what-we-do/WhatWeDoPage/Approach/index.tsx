@@ -90,7 +90,7 @@ export const Approach = ({ ...restProps }: ApproachProps) => {
                   alt="valley-image"
                   fill
                   onLoad={onLoad}
-                  {...(isMd && { objectFit: 'cover' })}
+                  {...(isMd && { style: { objectFit: 'cover' } })}
                 />
               </Box>
             </Grid>

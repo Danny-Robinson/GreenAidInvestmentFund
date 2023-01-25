@@ -57,7 +57,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
                 alt="splash-image"
                 fill
                 onLoad={onLoad}
-                objectFit="cover"
+                style={{ objectFit: 'cover' }}
               />
             </Box>
           </Grid>
@@ -77,7 +77,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
           alt="splash-image"
           fill
           onLoad={onLoad}
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
         {imageLoaded && (
           <Box position="absolute" left="0" width="100%">

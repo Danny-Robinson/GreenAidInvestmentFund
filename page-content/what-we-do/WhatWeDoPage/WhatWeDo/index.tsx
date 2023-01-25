@@ -26,7 +26,7 @@ export const WhatWeDo = ({ ...restProps }: WhatWeDoProps) => {
             mb={{ xs: 4, sm: 10 }}
             textAlign="center"
           >
-            What we do
+            What We Do
           </Txt>
           <Box
             pt={{ xs: 0, sm: 4 }}

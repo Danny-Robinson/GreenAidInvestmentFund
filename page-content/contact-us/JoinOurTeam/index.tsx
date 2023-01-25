@@ -34,9 +34,7 @@ export const JoinOurTeam = ({ ...restProps }: JoinOurTeamProps) => {
             </Animate>
           </Box>
           <Animate>
-            <Button href="https://www.google.com">
-              Contact us (link to do)
-            </Button>
+            <Button href="mailto:info@greenaid.com">Contact us</Button>
           </Animate>
         </Box>
         <CurrentOpenings mb={8} />

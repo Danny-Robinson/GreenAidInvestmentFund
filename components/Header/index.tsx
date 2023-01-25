@@ -91,7 +91,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
         mx={2}
         {...closeDrawerOnLink}
       >
-        <Txt {...txtProps.headline2}>What we do</Txt>
+        <Txt {...txtProps.headline2}>What We Do</Txt>
       </Box>
       <Box
         component={Link}

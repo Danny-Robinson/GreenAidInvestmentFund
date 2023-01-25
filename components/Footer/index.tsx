@@ -1,5 +1,6 @@
 import { Box, BoxProps, Container, styled } from '@mui/material';
 import { Routes } from '../../constants';
+import { LinkedInRoute } from '../../constants/config';
 import { colors, txtProps, zIndex } from '../../constants/styleguide';
 import { useMobile } from '../../utils/useMobile';
 import { LogoSymbol } from '../Icons/LogoSymbol';
@@ -44,7 +45,7 @@ export const Footer = ({ ...restProps }: FooterProps) => {
         {...(!isXs && { mr: 2 })}
         {...(isXs && { mb: 2 })}
       >
-        <Txt {...txtProps.headline2}>What we do</Txt>
+        <Txt {...txtProps.headline2}>What We Do</Txt>
       </Box>
       <Box
         component={Link}
@@ -128,7 +129,7 @@ export const Footer = ({ ...restProps }: FooterProps) => {
         >
           <Box
             component={Link}
-            href={'https://www.linkedin.com'}
+            href={LinkedInRoute}
             linkProps={linkProps}
             external
             {...(isXs && { mb: 2 })}

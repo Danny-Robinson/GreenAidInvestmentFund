@@ -4,6 +4,7 @@ import { BoxProps } from '../../../components/Box';
 import { LogoSymbol } from '../../../components/Icons/LogoSymbol';
 import { Link } from '../../../components/Link';
 import { Txt } from '../../../components/Txt';
+import { LinkedInRoute } from '../../../constants/config';
 import { colors, txtProps } from '../../../constants/styleguide';
 
 export interface ContactProps extends BoxProps {}
@@ -63,7 +64,7 @@ export const Contact = ({ ...restProps }: ContactProps) => {
               method={
                 <Box
                   component={Link}
-                  href={'https://www.linkedin.com'}
+                  href={LinkedInRoute}
                   linkProps={{
                     color: colors.Black,
                     underline: 'never',

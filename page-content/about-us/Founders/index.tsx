@@ -46,7 +46,13 @@ const Founder = ({ name, bio, src, title, ...restProps }: FounderProps) => {
             borderRadius="32px"
           />
         )}
-        <Image src={src} alt="splash-image" fill onLoad={onLoad} />
+        <Image
+          src={src}
+          alt="splash-image"
+          fill
+          onLoad={onLoad}
+          style={{ objectFit: 'cover' }}
+        />
       </Box>
       <Animate>
         <Txt {...txtProps.headline1} color={colors.Green1} mb={4}>

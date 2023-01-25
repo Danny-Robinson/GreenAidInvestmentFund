@@ -34,7 +34,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
           alt="splash-image"
           fill
           onLoad={onLoad}
-          objectFit="cover"
+          style={{ objectFit: 'cover' }}
         />
         {imageLoaded && (
           <Box position="absolute" width="100%" top={'calc(50% - 60px)'}>
