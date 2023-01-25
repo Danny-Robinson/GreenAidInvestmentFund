@@ -65,7 +65,7 @@ export const CurrentOpenings = ({ ...restProps }: CurrentOpeningsProps) => {
       bgcolor={colors.Green1}
       borderRadius="25px"
       py={8}
-      px={{ xs: 5, md: 15 }}
+      px={{ xs: 2, md: 5, lg: 15 }}
       {...restProps}
     >
       <Animate>
