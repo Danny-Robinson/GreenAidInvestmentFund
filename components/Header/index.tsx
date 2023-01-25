@@ -83,6 +83,9 @@ export const Header = ({ ...restProps }: HeaderProps) => {
   };
 
   const closeDrawerOnLink = { ...(drawerOpen && { onClick: onCloseDrawer }) };
+  const linkTxtProps = {
+    ...(drawerOpen ? txtProps.headline1 : txtProps.headline2),
+  };
   const Links = (
     <>
       <Box
@@ -93,7 +96,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
         {...(drawerOpen && { mb: 5 })}
         {...closeDrawerOnLink}
       >
-        <Txt {...txtProps.headline1}>What We Do</Txt>
+        <Txt {...linkTxtProps}>What We Do</Txt>
       </Box>
       <Box
         component={Link}
@@ -103,7 +106,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
         {...(drawerOpen && { my: 5 })}
         {...closeDrawerOnLink}
       >
-        <Txt {...txtProps.headline1}>About Us</Txt>
+        <Txt {...linkTxtProps}>About Us</Txt>
       </Box>
       <Box
         component={Link}
@@ -113,7 +116,7 @@ export const Header = ({ ...restProps }: HeaderProps) => {
         {...(drawerOpen && { my: 5 })}
         {...closeDrawerOnLink}
       >
-        <Txt {...txtProps.headline1}>Contact Us</Txt>
+        <Txt {...linkTxtProps}>Contact Us</Txt>
       </Box>
     </>
   );
