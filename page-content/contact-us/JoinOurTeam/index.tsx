@@ -37,7 +37,7 @@ export const JoinOurTeam = ({ ...restProps }: JoinOurTeamProps) => {
             <Button href="mailto:info@greenaid.com">Contact us</Button>
           </Animate>
         </Box>
-        <CurrentOpenings mb={8} />
+        {/* <CurrentOpenings mb={8} /> */}
       </Container>
     </Box>
   );
