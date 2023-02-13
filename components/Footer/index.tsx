@@ -138,7 +138,13 @@ export const Footer = ({ ...restProps }: FooterProps) => {
           </Box>
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }}>
             {/* {LegalLinks} */}
-            <Txt {...txtProps.body2} color={colors.White} ml={2}>
+            <Txt
+              {...txtProps.body2}
+              color={colors.White}
+              ml={2}
+              textAlign="center"
+              mb={1}
+            >
               © {new Date().getFullYear()} ALL RIGHTS RESERVED GREEN AID CORPS
               LTD
             </Txt>

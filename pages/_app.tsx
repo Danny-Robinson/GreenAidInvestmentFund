@@ -73,7 +73,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
 
       <HeaderTags meta={pageProps?.meta} />
-      <GoogleTags />
+      {/* <GoogleTags /> */}
       <Body
         pageProps={pageProps}
         Component={Component}
