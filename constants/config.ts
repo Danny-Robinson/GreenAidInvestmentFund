@@ -1,5 +1,5 @@
 export const Config = {
-  Domain: 'https://green-aid-investment-fund.onrender.com/', //TODO: update with real url
+  Domain: 'https://greenaid.com/',
 };
 
 export const LinkedInRoute = 'https://www.linkedin.com/company/greenaid/';

@@ -137,7 +137,7 @@ export const Footer = ({ ...restProps }: FooterProps) => {
             <StyledTxt {...txtProps.body2}>Find us on LinkedIn</StyledTxt>
           </Box>
           <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }}>
-            {LegalLinks}
+            {/* {LegalLinks} */}
             <Txt {...txtProps.body2} color={colors.White} ml={2}>
               © {new Date().getFullYear()} ALL RIGHTS RESERVED GREEN AID CORPS
               LTD
