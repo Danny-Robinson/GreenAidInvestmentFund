@@ -145,7 +145,7 @@ export const Footer = ({ ...restProps }: FooterProps) => {
               textAlign="center"
               mb={1}
             >
-              © {new Date().getFullYear()} ALL RIGHTS RESERVED GREEN AID CORPS
+              © {new Date().getFullYear()} ALL RIGHTS RESERVED GREEN AID CORP
               LTD
             </Txt>
           </Box>

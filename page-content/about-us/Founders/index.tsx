@@ -105,7 +105,7 @@ export const Founders = ({ ...restProps }: FoundersProps) => {
             <Founder
               name={'Leopold Rebilly'}
               bio={
-                'Leopold brings substantial experience through the launch of multiple nature-based projects in the Scottish Highlands. Prior to his involvement in Green Aid, Leopold worked in Real Estate development and venture capital where was responsible for the evaluation and development of prospective investment opportunities.'
+                'Leopold brings substantial experience through the launch of multiple nature-based projects in the Scottish Highlands. Prior to his involvement in Green Aid, Leopold worked in Real Estate development and venture capital where he was responsible for the evaluation and development of prospective investment opportunities.'
               }
               src={'/img/leo.webp'}
               title={'Education: B.S in Real Estate at New York University'}
