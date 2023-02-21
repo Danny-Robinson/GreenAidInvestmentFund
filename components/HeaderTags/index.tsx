@@ -31,6 +31,21 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      <link rel="icon" type="image/png" sizes="32x32" href={image} />
+      <link rel="icon" type="image/png" sizes="16x16" href={image} />
+      <link
+        rel="apple-touch-icon"
+        type="image/png"
+        sizes="167x167"
+        href={image}
+      />
+      <link
+        rel="apple-touch-icon"
+        type="image/png"
+        sizes="180x180"
+        href={image}
+      />
     </Head>
   );
 };
