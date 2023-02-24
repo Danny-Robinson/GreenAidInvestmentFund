@@ -18,7 +18,12 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
           py={{ xs: 25, sm: 15 }}
         >
           <Animate>
-            <Txt {...txtProps.title} mb={6} color={colors.Green1}>
+            <Txt
+              component="h1"
+              {...txtProps.title}
+              mb={6}
+              color={colors.Green1}
+            >
               What is Green Aid
             </Txt>
           </Animate>
