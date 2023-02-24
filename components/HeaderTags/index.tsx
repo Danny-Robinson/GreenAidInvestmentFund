@@ -41,7 +41,7 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
       />
       <meta
         property="og:image"
-        content="https://www.greenaid.com/img/splash.png"
+        content="https://www.greenaid.com/img/ogImage.webp"
       />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -54,7 +54,7 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
       />
       <meta
         name="twitter:image"
-        content="https://www.greenaid.com/img/splash.png"
+        content="https://www.greenaid.com/img/ogImage.webp"
       />
 
       <link
