@@ -1,5 +1,5 @@
 export const Config = {
-  Domain: 'https://greenaid.com/',
+  Domain: 'https://www.greenaid.com',
 };
 
 export const LinkedInRoute = 'https://www.linkedin.com/company/greenaid/';
