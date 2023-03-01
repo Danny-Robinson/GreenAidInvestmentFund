@@ -19,7 +19,7 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
         >
           <Animate>
             <Txt
-              component="h1"
+              component="h2"
               {...txtProps.title}
               mb={6}
               color={colors.Green1}

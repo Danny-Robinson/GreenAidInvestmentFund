@@ -41,6 +41,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
             <Container>
               <Box display="flex" justifyContent="center">
                 <Txt
+                  component="h1"
                   {...txtProps.title}
                   color={colors.White}
                   maxWidth="450px"

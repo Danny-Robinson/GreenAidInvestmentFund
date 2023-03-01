@@ -22,6 +22,7 @@ export const WhatWeDo = ({ ...restProps }: WhatWeDoProps) => {
         <Box display="flex" flexDirection="column">
           <Txt
             {...txtProps.title}
+            component="h2"
             color={colors.White}
             mb={{ xs: 4, sm: 10 }}
             textAlign="center"

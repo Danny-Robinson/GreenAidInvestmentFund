@@ -18,7 +18,12 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
       <Container>
         <Box display="flex" justifyContent="center" textAlign="center">
           <Box maxWidth={600}>
-            <Txt color={colors.Green1} display="inline" {...txtProps.title}>
+            <Txt
+              color={colors.Green1}
+              display="inline"
+              {...txtProps.title}
+              component="h1"
+            >
               <Txt color={colors.Green2} display="inline" {...txtProps.title}>
                 Green Aid
               </Txt>{' '}

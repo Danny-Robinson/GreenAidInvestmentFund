@@ -85,6 +85,7 @@ export const Founders = ({ ...restProps }: FoundersProps) => {
           color={colors.Green1}
           textAlign="center"
           mb={8}
+          component="h2"
         >
           The Founders
         </Txt>

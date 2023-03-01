@@ -20,7 +20,12 @@ export const JoinOurTeam = ({ ...restProps }: JoinOurTeamProps) => {
           textAlign="center"
         >
           <Animate>
-            <Txt {...txtProps.title} color={colors.Green1} mb={6}>
+            <Txt
+              {...txtProps.title}
+              color={colors.Green1}
+              mb={6}
+              component="h2"
+            >
               Join Our Team
             </Txt>
           </Animate>

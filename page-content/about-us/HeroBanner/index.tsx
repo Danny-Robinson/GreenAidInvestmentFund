@@ -27,6 +27,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
         {...txtProps.headline1}
         color={colors.White}
         maxWidth={{ xs: '100%', md: '410px' }}
+        component="h1"
       >
         In order to protect the integrity of the voluntary carbon market, we
         must place a strong emphasis on the additional co-benefits that our

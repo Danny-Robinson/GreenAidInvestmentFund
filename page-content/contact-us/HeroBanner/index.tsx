@@ -22,7 +22,7 @@ export const HeroBanner = ({ ...restProps }: HeroBannerProps) => {
 
   const text = (
     <>
-      <Txt {...txtProps.title} color={colors.White}>
+      <Txt {...txtProps.title} color={colors.White} component="h1">
         Get in touch
       </Txt>
       <Txt
