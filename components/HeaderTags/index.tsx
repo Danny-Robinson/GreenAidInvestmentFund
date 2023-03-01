@@ -25,7 +25,7 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://www.greenaid.com/img/og-image.webp"
+        content="https://www.greenaid.com/img/og-image.png"
       />
       <meta property="og:image:type" content="image/png" />
       <meta property="og:image:width" content="1200" />
