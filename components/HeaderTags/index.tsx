@@ -25,12 +25,19 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
       <meta property="og:description" content={description} />
       <meta
         property="og:image"
-        content="https://www.greenaid.com/img/GreenAid-opengraph.webp"
+        content="https://www.greenaid.com/img/og-image.webp"
       />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="600" />
+
       <meta
         property="og:image"
-        content="https://www.greenaid.com/img/GreenAid-opengraph-400x400.png"
+        content="https://www.greenaid.com/img/og-image-400.png"
       />
+      <meta property="og:image:type" content="image/png" />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="400" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta property="twitter:domain" content="greenaid.com" />
