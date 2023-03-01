@@ -11,7 +11,7 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
     return null;
   }
 
-  const { title, description, url, image, domain, type } = meta;
+  const { title, description } = meta;
 
   return (
     <Head>
@@ -19,29 +19,17 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
 
       <meta name="description" content={description} />
 
-      {/* <meta property="og:title" content={title} />
-      <meta property="og:url" content={url} />
-      <meta property="og:type" content={type} />
-      <meta property="og:description" content={description} />
-      <meta name="image" property="og:image" content={`${domain}${image}`} />
-
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta property="twitter:domain" content={domain} />
-      <meta property="twitter:url" content={url} />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={`${domain}${image}`} /> */}
-
       <meta property="og:url" content="https://www.greenaid.com" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Green Aid Investment Fund" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta
-        property="og:description"
-        content="Green Aid is an investment fund focused on accelerating private sector investments into high-impact nature-based solutions globally."
+        property="og:image"
+        content="https://www.greenaid.com/img/GreenAid-opengraph.webp"
       />
       <meta
         property="og:image"
-        content="https://www.greenaid.com/img/ogImage.webp"
+        content="https://www.greenaid.com/img/GreenAid-opengraph-400x400.png"
       />
 
       <meta name="twitter:card" content="summary_large_image" />
@@ -54,7 +42,7 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
       />
       <meta
         name="twitter:image"
-        content="https://www.greenaid.com/img/ogImage.webp"
+        content="https://www.greenaid.com/img/GreenAid-opengraph.png"
       />
 
       <link
