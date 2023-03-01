@@ -56,25 +56,25 @@ export const HeaderTags = ({ meta }: HeaderTagsProps) => {
         rel="shortcut icon"
         type="image/x-icon"
         sizes="32x32"
-        href="/favicon.ico"
+        href="favicon.ico"
       />
       <link
         rel="shortcut icon"
         type="image/x-icon"
         sizes="16x16"
-        href="/favicon.ico"
+        href="favicon.ico"
       />
       <link
         rel="apple-touch-icon"
         type="image/png"
         sizes="167x167"
-        href="/favicon.ico"
+        href="favicon.ico"
       />
       <link
         rel="apple-touch-icon"
         type="image/png"
         sizes="180x180"
-        href="/favicon.ico"
+        href="favicon.ico"
       />
     </Head>
   );
