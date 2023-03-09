@@ -1,7 +1,8 @@
 import { PageMeta } from '../types/next';
 import { Config } from '../constants/config';
 
-export const GENERIC_TITLE = 'Green Aid Investment Fund';
+export const GENERIC_TITLE =
+  'Green Aid Investment Fund - Invest in a net-zero future';
 export const GENERIC_DESCRIPTION =
   'Green Aid is an investment fund focused on accelerating private sector investments into high-impact nature-based solutions globally.';
 export const GENERIC_IMAGE = '/img/splash.png';
