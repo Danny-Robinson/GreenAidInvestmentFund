@@ -3,6 +3,7 @@ import { Animate } from '../../../../components/Animate';
 import { Button } from '../../../../components/Button';
 import { Txt } from '../../../../components/Txt';
 import { Routes } from '../../../../constants';
+import { LinkedInRoute } from '../../../../constants/config';
 import { colors, txtProps } from '../../../../constants/styleguide';
 
 export interface WhatIsGreenAidProps extends BoxProps {}
@@ -50,10 +51,7 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
             </Button>
           </Animate>
           <meta itemProp="url" content="https://www.greenaid.com/" />
-          <meta
-            itemProp="sameAs"
-            content="https://www.linkedin.com/company/greenaid/"
-          />
+          <meta itemProp="sameAs" content={LinkedInRoute} />
         </Box>
       </Container>
     </Box>
