@@ -16,6 +16,8 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
           flexDirection="column"
           alignItems="center"
           py={{ xs: 25, sm: 15 }}
+          itemScope
+          itemType="http://schema.org/InvestmentOrDeposit"
         >
           <Animate>
             <Txt
@@ -23,6 +25,7 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
               {...txtProps.title}
               mb={6}
               color={colors.Green1}
+              itemProp="name"
             >
               What is Green Aid
             </Txt>
@@ -34,6 +37,7 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
               maxWidth={620}
               textAlign="center"
               color={colors.Green1}
+              itemProp="description"
             >
               Green Aid is an investment fund focused on accelerating private
               sector investments into high-impact nature and technology based
@@ -45,6 +49,11 @@ export const WhatIsGreenAid = ({ ...restProps }: WhatIsGreenAidProps) => {
               <Txt {...txtProps.body2}>Find out more</Txt>
             </Button>
           </Animate>
+          <meta itemProp="url" content="https://www.greenaid.com/" />
+          <meta
+            itemProp="sameAs"
+            content="https://www.linkedin.com/company/greenaid/"
+          />
         </Box>
       </Container>
     </Box>
